@@ -1,0 +1,72 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="utf-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <!-- The above 3 meta tags *must* come first in the head; any other head content must come *after* these tags -->
+    <title>Welcome- simply click</title>
+
+    <!-- Bootstrap -->
+    <link href="css/bootstrap.min.css" rel="stylesheet">
+    <link href="css/nav.css" rel="stylesheet">
+    <link href="css/style.css" rel="stylesheet">
+    <link href="https://fonts.googleapis.com/css?family=Roboto" rel="stylesheet">
+
+    <!-- HTML5 shim and Respond.js for IE8 support of HTML5 elements and media queries -->
+    <!-- WARNING: Respond.js doesn't work if you view the page via file:// -->
+    <!--[if lt IE 9]>
+    <script src="https://oss.maxcdn.com/html5shiv/3.7.3/html5shiv.min.js"></script>
+    <script src="https://oss.maxcdn.com/respond/1.4.2/respond.min.js"></script>
+    <![endif]-->
+</head>
+<body ng-app="myApp" ng-controller="myCtrl" class="back-1">
+
+<div id="wrapper">
+    <div class="overlay"></div>
+
+    <div ng-include="'partials/nav.html'"></div>
+
+    <!-- Page Content -->
+    <div id="page-content-wrapper">
+        <button type="button" class="hamburger is-closed" data-toggle="offcanvas">
+            <span class="hamb-top"></span>
+            <span class="hamb-middle"></span>
+            <span class="hamb-bottom"></span>
+        </button>
+        <div class="container">
+            <div class="row">
+                <div class="col-md-6 welcome-msg" id="welcome-msg">
+                    <h1>Simply Click</h1>
+                    <p>A WYSIWYG (pronounced "wiz-ee-wig") editor or program is one that allows a developer to see what the end result will look like while the interface or document is being created. WYSIWYG is an acronym for "what you see is what you get". A WYSIWYG editor can be contrasted with more traditional editors that require the developer to enter descriptive codes (or markup ) and do not permit an immediate way to see the results of the markup. The first true WYSIWYG editor was a word processing program called Bravo. Invented by Charles Simonyi at the Xerox Palo Alto Research Center in the 1970s, it became the basis for Simonyi's work at Microsoft and evolved into two other WYSIWYG applications called Word and Excel .</p>
+                    <p>An HTML WYSIWYG editor, such as Microsoft's FrontPage or Adobe's PageMill conceals the markup and allows the Web page developer to think entirely in terms of how the content should appear. One of the trade-offs, however, is that an HTML WYSIWYG editor sometimes inserts the markup code it thinks is needed all on its own. Then, the developer has to know enough about the markup language to go back into the source code and clean it up.</p>
+                </div>
+                <div class="col-md-6 floating-box welcome-cat" id="welcome-cat">
+                    <h1 class="page-header" style="text-align: center">Select a category</h1>
+                    <div class="row content">
+                        <div class="col-md-4"  ng-repeat="x in cat_arr">
+                            <div class="cats" ng-click="redirect_cat(x.id)">
+                                <img src="img/icon_padded.png" class="img-responsive cat-img" alt=""> 
+                                <span class="hide-cat-name">{{x.name}}</span>   
+                            </div>
+                            
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+    <!-- /#page-content-wrapper -->
+
+</div>
+<!-- /#wrapper -->
+
+<!-- jQuery (necessary for Bootstrap's JavaScript plugins) -->
+<script src="https://ajax.googleapis.com/ajax/libs/jquery/1.12.4/jquery.min.js"></script>
+<!-- Include all compiled plugins (below), or include individual files as needed -->
+<script src="js/bootstrap.min.js"></script>
+<script src="js/nav.js"></script>
+<script src="js/angular.min.js"></script>
+<script src="js/index.js"></script>
+</body>
+</html>

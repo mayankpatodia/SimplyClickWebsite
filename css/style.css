@@ -1,0 +1,234 @@
+@keyframes dropHeader {
+  0% {
+    transform: translateY(-100%);
+  }
+  100% {
+    transform: translateY(0);
+  }
+}
+@keyframes dropHeaderOpp {
+  0% {
+    transform: translateY(30%);
+  }
+  100% {
+    transform: translateY(0);
+  }
+}
+@keyframes fadein {
+    from { opacity: 0; }
+    to   { opacity: 1; }
+}
+@keyframes sideHeader {
+  0% {
+    transform: translateX(100%);
+  }
+  100% {
+    transform: translateX(0);
+  }
+}
+@keyframes sideHeaderLeft {
+  0% {
+    transform: translateX(-100%);
+  }
+  100% {
+    transform: translateX(0);
+  }
+}
+
+.floating-box {
+    box-shadow: 0 1px 3px rgba(0, 0, 0, 0.12), 0 1px 2px rgba(0, 0, 0, 0.24);
+    transition: all 0.3s cubic-bezier(.25, .8, .25, 1);
+	animation-name: dropHeader;
+	animation-iteration-count: 1;
+	animation-timing-function: ease-out;
+	animation-duration: 1s;
+}
+
+.floating-box:hover {
+    box-shadow: 0 14px 28px rgba(0, 0, 0, 0.25), 0 10px 10px rgba(0, 0, 0, 0.22);
+}
+
+.welcome-cat {
+    padding: 20px 40px 40px 40px;
+    background-color: #fff;
+	
+}
+.welcome-msg{
+    padding:40px;
+    color: #fff;
+}
+
+.cats{
+    border-radius: 50%;
+    padding: 0px;   
+    overflow:hidden;
+    box-shadow: none;
+    transition: all 0.2s ease-in-out;
+}
+.cats:hover{
+    box-shadow: 0 14px 28px rgba(0, 0, 0, 0.25), 0 10px 10px rgba(0, 0, 0, 0.22);
+}
+.col-md-4{
+    padding: 20px 20px;
+}
+
+.hide-cat-name{
+    display: none;
+    cursor: pointer;
+}
+.cats:hover .hide-cat-name{
+    position: absolute;
+    background: rgba(0,0,0,0.8);
+    top: 0;
+    left: 0;
+    right: 0;
+    bottom: 0;
+    color: #fff;
+    justify-content: center;
+    align-items: center;
+    display: flex;
+    border-radius: 50%;
+    margin: 20px;
+}
+
+body.back-1 {
+    background: linear-gradient(
+            rgba(20,20,20, .5),
+            rgba(20,20,20, .5)),
+    url("../img/back.jpg");
+    font-family: 'Roboto', sans-serif;
+}
+
+
+/*view picture*/
+
+
+
+body.back-2 {
+    background: linear-gradient(
+            rgba(20,20,20, .5),
+            rgba(20,20,20, .5)),
+    url("../img/back2.jpg");
+    font-family: 'Roboto', sans-serif;
+    background-size: cover;
+}
+
+.section-cat-desc{
+    background: linear-gradient(
+            rgba(255,255,255, .8),
+            rgba(255,255,255, .8)),
+    url("../img/back2.jpg");
+    padding: 20px;
+    animation-name: sideHeaderLeft;
+    animation-iteration-count: 1;
+    animation-timing-function: ease-out;
+    animation-duration: 0.5s;
+}
+.themes{
+    background: #ddd;
+    padding: 1%;
+}
+.theme{
+    background: #fff;
+    margin:2%;
+    width: 96%;
+    box-sizing: border-box;
+    padding: 1%;
+    transition: all 0.2s ease-in-out;
+    cursor: pointer;
+    animation-name: dropHeaderOpp;
+    animation-iteration-count: 1;
+    animation-timing-function: ease-out;
+    animation-duration: 0.75s;
+}
+.theme:hover{
+    box-shadow: 0 14px 28px rgba(0, 0, 0, 0.25), 0 10px 10px rgba(0, 0, 0, 0.22);
+}
+.theme-desc{
+    padding: 2%;
+}
+
+.theme-desc h3{
+    color: darkorange;
+}
+.them-desc p{
+    color: #444;
+}
+.theme-desc .date,h4{
+    color: #999;
+}
+
+
+/*view picture ends*/
+
+/*about section*/
+
+body.back-3 {
+    background: linear-gradient(
+            rgba(20,20,20, .5),
+            rgba(20,20,20, .5)),
+    url("../img/back3.jpg");
+    font-family: 'Roboto', sans-serif;
+    background-size: cover;
+}
+
+.about-head h1{
+    color: #fff;
+    font-size: 80px;
+    animation-name: fadein;
+    animation-iteration-count: 1;
+    animation-timing-function: ease-in-out;
+    animation-duration: 1s;
+
+}
+
+.about-desc{
+    padding: 30px;
+    background: #fff;
+    margin-bottom: 10px;
+    transition: all 0.3s cubic-bezier(.25, .8, .25, 1);
+    animation-name: sideHeader;
+    animation-iteration-count: 1;
+    animation-timing-function: ease-out;
+    animation-duration: 1.25s;
+}
+.about-desc:last-child{
+    padding: 30px;
+    background: #fff;
+    margin-bottom: 10px;
+    transition: all 0.3s cubic-bezier(.25, .8, .25, 1);
+    animation-name: sideHeader;
+    animation-iteration-count: 1;
+    animation-timing-function: ease-out;
+    animation-duration: 1s;
+}
+
+.about-desc .col-md-3{
+    border-radius: 50%;
+}
+.about-desc img{ 
+    width: 100%;
+    border-radius: 50%;
+}
+
+.dev-desc{
+    padding: 20px;
+}
+
+.dev-head{
+    display: flex;
+    flex-direction: row;
+    align-items: center;
+    
+}
+
+@media screen(max-width: 768px) {
+    
+    .about-head h1{
+        color: #fff;
+        font-size: 45px;
+
+    }    
+}
+
+/*about section ends*/

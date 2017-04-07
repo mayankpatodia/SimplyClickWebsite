@@ -1,0 +1,74 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="utf-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <!-- The above 3 meta tags *must* come first in the head; any other head content must come *after* these tags -->
+    <title>Welcome- simply click</title>
+
+    <!-- Bootstrap -->
+    <link href="css/bootstrap.min.css" rel="stylesheet">
+    <link href="css/nav.css" rel="stylesheet">
+    <link href="css/style.css" rel="stylesheet">
+    <link href="https://fonts.googleapis.com/css?family=Roboto" rel="stylesheet">
+
+    <!-- HTML5 shim and Respond.js for IE8 support of HTML5 elements and media queries -->
+    <!-- WARNING: Respond.js doesn't work if you view the page via file:// -->
+    <!--[if lt IE 9]>
+    <script src="https://oss.maxcdn.com/html5shiv/3.7.3/html5shiv.min.js"></script>
+    <script src="https://oss.maxcdn.com/respond/1.4.2/respond.min.js"></script>
+    <![endif]-->
+</head>
+<body ng-app="myApp" ng-controller="myCtrl" class="back-2">
+
+<div id="wrapper">
+    <div class="overlay"></div>
+
+    <div ng-include="'partials/nav.html'"></div>
+
+    <!-- Page Content -->
+    <div id="page-content-wrapper">
+        <button type="button" class="hamburger is-closed" data-toggle="offcanvas">
+            <span class="hamb-top"></span>
+            <span class="hamb-middle"></span>
+            <span class="hamb-bottom"></span>
+        </button>
+        <div class="container">
+            <div class="row">
+                <div class="col-md-3 section-cat-desc" ng-repeat="x in cat_arr">
+                    <h2>{{x.name}}</h2>
+                    <p>{{x.description}} </p>
+                </div>
+                <div class="col-md-9 themes">
+                    <div class="col-md-12 theme" ng-repeat="y in theme_arr">
+                        <div class="col-md-4 theme-img">
+                            <img src="img/icon_with_background.png" class="img-responsive" alt="">
+                        </div>
+                        <div class="col-md-8 theme-desc">
+                            <h3>{{y.name}}</h3>
+                            <h4>{{y.user_name}}</h4>
+                            <p>
+                                {{y.description}}
+                            </p>
+                            <h6><i>uploaded at: {{y.date_created}}</i></h6>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+    <!-- /#page-content-wrapper -->
+
+</div>
+<!-- /#wrapper -->
+
+<!-- jQuery (necessary for Bootstrap's JavaScript plugins) -->
+<script src="https://ajax.googleapis.com/ajax/libs/jquery/1.12.4/jquery.min.js"></script>
+<!-- Include all compiled plugins (below), or include individual files as needed -->
+<script src="js/bootstrap.min.js"></script>
+<script src="js/nav.js"></script>
+<script src="js/angular.min.js"></script>
+<script src="js/view_picture.js"></script>
+</body>
+</html>
