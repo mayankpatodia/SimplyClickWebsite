@@ -2,9 +2,11 @@
 
     $dir = "".dirname(dirname(dirname(__FILE__)));
 
+    $search = '\\';
+    $tmp = explode($search,$dir);
+    $dir_name = end($tmp);
     //$dir = '../test';
-    $zip_file = 'website.zip';
-
+    $zip_file = '../../../'.$dir_name.'.zip';
     // Get real path for our folder
     $rootPath = realpath($dir);
 

@@ -14,8 +14,10 @@ function recurse_copy($src,$dst) {
     }
     closedir($dir);
 }
-
-$src = '../../../test';
-$dst = '../../../folder'.time();
+$cat_name = $_GET['cat_name'];
+$theme_name = $_GET['theme_name'];
+$src = '../../_templates/'.$cat_name.'/'.$theme_name;
+$dst = '../../_downloads/'.$theme_name.time();
 recurse_copy($src,$dst);
+header('Location: '.$dst);
 ?>
