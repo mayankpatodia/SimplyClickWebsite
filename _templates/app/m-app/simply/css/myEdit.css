@@ -1,0 +1,55 @@
+#simply .list-group-horizontal .list-group-item {
+    display: inline-block;
+}
+
+#simply .list-group-horizontal .list-group-item {
+    margin-bottom: 0;
+    margin-left: -4px;
+    margin-right: 0;
+}
+
+#simply .list-group-horizontal .list-group-item:first-child {
+    border-top-right-radius: 0;
+    border-bottom-left-radius: 4px;
+}
+
+#simply .list-group-horizontal .list-group-item:last-child {
+    border-top-right-radius: 4px;
+    border-bottom-left-radius: 0;
+}
+
+#simply .ctext {
+    display: inline-block;
+    min-width: 30px;
+    min-height: 30px !important;
+    height: 100% !important;
+    overflow: hidden;
+}
+#simply .fontName{
+    width:100%;
+    display: inline;
+}
+#simply .fontSelect{
+    margin: 0px;
+    padding: 5px;
+    border: none;
+    border-bottom: 1px red solid;
+    box-shadow: none;
+    border-radius: 0px;
+}
+#simply .fontSelect:focus{
+    margin: 0px;
+    padding: 5px;
+    border: none;
+    border-bottom: 1px green solid;
+    box-shadow: none;
+    border-radius: 0px;
+}
+
+
+
+
+#simply #link-popover-content{
+    display:none;
+    z-index: 10000000;
+}
