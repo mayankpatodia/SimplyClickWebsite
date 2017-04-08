@@ -39,9 +39,16 @@ function removeArea2() {
 }
 
 $("#clickme").click(function(){
+    $("#myModal").remove();
+    $("#clickme").remove();
+    $("LINK[href*='simply/css/myEdit.css']").remove();
     var html = document.documentElement.innerHTML;
     alert(html);
-    $.post( "simply/php/save_file.php", { data: html } );
+    console.log("a");
+    $.post( "simply/php/save_file.php", { data: html },function(data,status){
+      console.log(data);
+    });
+    console.log("b");
 });
 
 /*--------------------EDITOR FUNCTIONS-----------------------*/

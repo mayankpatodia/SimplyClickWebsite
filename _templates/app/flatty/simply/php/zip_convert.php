@@ -1,5 +1,7 @@
 <?php
 
+    $dir = "".dirname(dirname(dirname(__FILE__)));
+
     //$dir = '../test';
     $zip_file = 'website.zip';
 
@@ -19,8 +21,10 @@
 
     foreach ($files as $name => $file)
     {
+        $pos = strpos(dirname($file), 'simply');
         // Skip directories (they would be added automatically)
-        if (!$file->isDir())
+        if (!$file->isDir() && $pos===false)
+
         {
             // Get real and relative path for current file
             $filePath = $file->getRealPath();
@@ -31,7 +35,10 @@
         }
     }
 
+
     // Zip archive will be created only after closing object
 $zip->close();
+
+//include 'zip_download.php';
 
 ?>
