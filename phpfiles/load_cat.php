@@ -20,7 +20,7 @@
 	        // echo "category_logo: " . $row['category_logo'] . '<br>';
 	        // echo "date_created: " . $row['date_created'] . '<br><br>';
 
-	        array_push($cat_arr, array('id' => $row['id'], 'name' => $row["name"], 'description' => $row['description'],'src' => $row["category_logo"]));
+	        array_push($cat_arr, array('id' => $row['id'], 'name' => $row["name"], 'description' => htmlentities($row['description']),'src' => $row["category_logo"]));
 	    }
 	} else {
 	    echo "0 results";

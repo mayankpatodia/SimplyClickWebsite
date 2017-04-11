@@ -16,7 +16,7 @@
 	        // echo "category_logo: " . $row['category_logo'] . '<br>';
 	        // echo "date_created: " . $row['date_created'] . '<br><br>';
 
-	        array_push($theme_arr, array('id' => $row['id'], 'name' => $row["name"],'theme_image' => $row['theme_image'],'url' => $row['url'],'category_id' => $row['category_id'],'user_name' => $row['user_name'],'description' => htmlspecialchars($row['description']),'date_created' => $row['date_created']));
+	        array_push($theme_arr, array('id' => $row['id'], 'name' => $row["name"],'theme_image' => $row['theme_image'],'url' => $row['url'],'category_id' => $row['category_id'],'user_name' => $row['user_name'],'description' => htmlentities($row['description']),'date_created' => $row['date_created']));
 	        // 'description' => $row['description'],
 	    }
 	} else {

@@ -232,3 +232,51 @@ body.back-3 {
 }
 
 /*about section ends*/
+
+
+
+
+
+/* Website Download Starts*/
+
+body.back-4 {
+    background: linear-gradient(
+            rgba(20,20,20, .5),
+            rgba(20,20,20, .5)),
+    url("../img/back4.jpg");
+    font-family: 'Roboto', sans-serif;
+    background-size: cover;
+}
+
+.about-head .download-text-head{
+    text-align: center;
+}
+
+.final-download{
+    background-color: orange;
+    color: #fff;
+    padding: 20px 40px;
+    border-radius: 2px;
+    float: right;
+}
+
+.final-download:hover{
+    color: #fff;
+    background-color: darkorange;
+    box-shadow: 1px 1px 10px 1px #747474;
+}
+
+.final-download:focus{
+    color: #fff;
+    background-color: darkorange;
+    box-shadow: 1px 1px 10px 1px #747474;
+    outline: none;
+}
+.final-download-outer{
+    display: flex;
+    justify-content: center;
+    margin-top: 50px;
+}
+
+
+/* Wesbite Download Ends */

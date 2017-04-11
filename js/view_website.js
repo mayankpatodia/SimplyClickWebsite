@@ -1,16 +1,16 @@
 var id=window.location.href.split('?id=')[1];
 var app = angular.module('myApp', []);
 app.controller('myCtrl', function($scope, $http, $window) {
-    $scope.redirect_cat=function(x){
-        $window.location.href='view_websites.html?id='+(x+1);
+    $scope.redirectTo=function(theme,cat){
+        $window.location.href='_simply/php/copy_folder.php?cat_name='+cat+'&theme_name='+theme;
     }
     $http.get("phpfiles/load_cat.php?id="+id.toString())
     .then(function(response) {
         //First function handles success
-        $scope.cat_arr = response.data;
+        $scope.cat_array = response.data;
     }, function(response) {
         //Second function handles error
-        $scope.cat_arr = "Something went wrong";
+        $scope.cat_array = "Something went wrong";
     });
     $http.get("phpfiles/load_theme.php?id="+id.toString())
     .then(function(response2) {
@@ -19,5 +19,13 @@ app.controller('myCtrl', function($scope, $http, $window) {
     }, function(response2) {
         //Second function handles error
         $scope.theme_arr = "Something went wrong";
+    });
+    $http.get("phpfiles/load_cat.php")
+    .then(function(response) {
+        //First function handles success
+        $scope.cat_arr = response.data;
+    }, function(response) {
+        //Second function handles error
+        $scope.cat_arr = "Something went wrong";
     });
 });

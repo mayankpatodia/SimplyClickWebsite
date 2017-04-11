@@ -26,6 +26,7 @@
     <div class="overlay"></div>
 
     <div ng-include="'partials/nav.html'"></div>
+    <div ng-include="'partials/upload_theme_form.html'"></div>
 
     <!-- Page Content -->
     <div id="page-content-wrapper">
@@ -44,9 +45,9 @@
                 <div class="col-md-6 floating-box welcome-cat" id="welcome-cat">
                     <h1 class="page-header" style="text-align: center">Select a category</h1>
                     <div class="row content">
-                        <div class="col-md-4"  ng-repeat="x in cat_arr">
+                        <div class="col-md-4"  ng-repeat="x in cat_arr track by $index">
                             <div class="cats" ng-click="redirect_cat(x.id)">
-                                <img src="img/icon_padded.png" class="img-responsive cat-img" alt=""> 
+                                <img src="{{x.src}}" class="img-responsive cat-img" alt=""> 
                                 <span class="hide-cat-name">{{x.name}}</span>   
                             </div>
                             

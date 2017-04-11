@@ -1,3 +1,8 @@
+<?php 
+    session_start();
+    $file_name = $_SESSION['file_name'];
+?>
+
 <!DOCTYPE html>
 <html lang="en">
 <head>
@@ -5,7 +10,7 @@
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta name="viewport" content="width=device-width, initial-scale=1">
     <!-- The above 3 meta tags *must* come first in the head; any other head content must come *after* these tags -->
-    <title>Welcome- simply click</title>
+    <title>Download Website</title>
 
     <!-- Bootstrap -->
     <link href="css/bootstrap.min.css" rel="stylesheet">
@@ -20,42 +25,21 @@
     <script src="https://oss.maxcdn.com/respond/1.4.2/respond.min.js"></script>
     <![endif]-->
 </head>
-<body ng-app="myApp" ng-controller="myCtrl" class="back-2">
+<body ng-app="myApp" ng-controller="myCtrl" class="back-4">
 
 <div id="wrapper">
     <div class="overlay"></div>
 
-    <div ng-include="'partials/nav.html'"></div>
-    <div ng-include="'partials/upload_theme_form.html'"></div>
 
     <!-- Page Content -->
     <div id="page-content-wrapper">
-        <button type="button" class="hamburger is-closed" data-toggle="offcanvas">
-            <span class="hamb-top"></span>
-            <span class="hamb-middle"></span>
-            <span class="hamb-bottom"></span>
-        </button>
         <div class="container">
-            <div class="row"  ng-repeat="x in cat_array track by $index">
-                <div class="col-md-3 section-cat-desc">
-                    <h2>{{x.name}}</h2>
-                    <p>{{x.description}} </p>
-
+            <div class="row">
+                <div class="col-md-12 about-head">
+                    <h1 class="download-text-head">WooHoo! Your website has been generated in few simple clicks. Click below to download.</h1>
                 </div>
-                <div class="col-md-9 themes">
-                    <div class="col-md-12 theme" ng-repeat="y in theme_arr track by $index" ng-click="redirectTo(y.name,x.name)">
-                        <div class="col-md-4 theme-img">
-                            <img src="{{y.theme_image}}" class="img-responsive" alt="">
-                        </div>
-                        <div class="col-md-8 theme-desc">
-                            <h3>{{y.name}}</h3>
-                            <h4>{{y.user_name}}</h4>
-                            <p>
-                                {{y.description}}
-                            </p>
-                            <h6><i>uploaded at: {{y.date_created}}</i></h6>
-                        </div>
-                    </div>
+                <div class="col-md-12 final-download-outer">
+                    <button onclick="download_website('<?php echo $file_name; ?>')" class="btn btn-lg final-download"><span class="glyphicon glyphicon-save"></span> Download</button>
                 </div>
             </div>
         </div>
@@ -71,6 +55,7 @@
 <script src="js/bootstrap.min.js"></script>
 <script src="js/nav.js"></script>
 <script src="js/angular.min.js"></script>
-<script src="js/view_website.js"></script>
+<!-- <script src="js/view_picture.js"></script> -->
+<script src="js/file_created.js"></script>
 </body>
 </html>
