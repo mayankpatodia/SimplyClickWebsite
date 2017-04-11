@@ -15,7 +15,7 @@ function recurse_copy($src,$dst) {
     closedir($dir);
 }
 
-$src = '../../../test';
+$src = '../../php';
 $dst = '../../../folder'.time();
 recurse_copy($src,$dst);
 ?>

@@ -40,7 +40,12 @@
 
     // Zip archive will be created only after closing object
 $zip->close();
+session_start();
+$_SESSION["file_name"] = $dir_name;
+//echo dirname(dirname(dirname(__FILE__)));
 
 //include 'zip_download.php';
+
+
 
 ?>

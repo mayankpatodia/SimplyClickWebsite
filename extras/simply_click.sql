@@ -3,7 +3,7 @@
 -- http://www.phpmyadmin.net
 --
 -- Host: 127.0.0.1
--- Generation Time: Apr 07, 2017 at 01:24 PM
+-- Generation Time: Apr 11, 2017 at 05:33 PM
 -- Server version: 5.6.17
 -- PHP Version: 5.5.12
 
@@ -40,9 +40,10 @@ CREATE TABLE IF NOT EXISTS `category` (
 --
 
 INSERT INTO `category` (`id`, `name`, `description`, `category_logo`, `date_created`) VALUES
-(1, 'Personal', 'Your Internet Service Provider or Domain Registrar may offer you free server space for you to create your own website that might include some family photos and an online diary. Usually these will have a web address (URL) looking something like this: www.your-isp.com/~your-user-name/. This type of site is useful for a family, teenagers, grandparents, etc. to stay in touch with each other. This type is not advisable for a small business because the URL is not search engine friendly and the limited server capabilities your hosting company offer may not be sophisticated enough for a small business website. ', 'img/cat1.png', '2017-04-06 16:33:48'),
-(2, 'Authors', 'Writer''s and Author''s websites are part of what''s known as the Writer''s or Author''s Platform in the publishing business. The platform includes, a website, a Facebook presence, blog, Twitter account, and the old fashioned mailing list. Many publishers will ask a prospective client about their platform. In other words, "If we publish your book, what sort of a reader base do you already have that we can count on to buy your new publication?" Fairly weighty request, wouldn''t you say? For now, let''s concentrate on the website part. A writers website would include a biography, a catalog of published books and works, perhaps excerpts from some works, links to publications on sites like Amazon.com, a link to the writer''s blog, reviews and comments on the author''s publications. You get the idea, and that is to build a following, a fan base to which future publications can be directly marketed. ', 'img/cat2.png', '2017-04-06 16:36:49'),
-(4, 'Photo sharing', 'These types of website are cropping up like fleas on dog. There are web sites like, Flickr.com, Photosite.com, and Google''s Picasa. There could easily be over a hundred such sites that offer free photo sharing paid for by their online advertising. Also, many digital cameras and photo printers now come with software enabling mere mortals to create digital photo slide shows and upload them to the web. Most smart phones have apps to accomplish the same ends. ', 'img/cat3.png', '2017-04-06 16:36:49');
+(1, 'App', 'The word "app" is an abbreviation for application. An app is a piece of software. It can run on the internet, on your computer, or on your phone or any other electronic device. The word "app" is a more modern usage, but this is really the same thing as a software program. \r\n\r\nIn modern use, most people refer to apps as applications or software programs that run specifically on phones or other mobile devices.\r\n\r\nThis is probably the most common way to discuss apps. The Google Play store, for example (which sells movies, e-books, and music in addition to software), has a section on apps and "My apps." Amazon has a section called Appstore for Android. Apple has an App Store for iOS devices. However, these are all just mobile apps.\r\n\r\nWhile the word "app" has gained popularity in the context of mobile devices, it still applies more broadly to programs in general, and this usage has become more common. Apple now sells official software for Macs on the Mac App Store.', 'img/category_app_cover.png', '2017-04-11 14:06:25'),
+(2, 'Personal', 'A personal category is a category that is named with your WikiTree ID.\r\n\r\nEach WikiTree ID is unique so when you make a category named with your ID you are making a unique category that will be there exclusively for your use. You can add subcategories to it or you can just use it alone to hold notes and profiles on which you need to do additional work.', 'img/category_personal_cover.png', '2017-04-11 14:11:54'),
+(3, 'Author', 'Lorem Ipsum is simply dummy text of the printing and typesetting industry. Lorem Ipsum has been the industry''s standard dummy text ever since the 1500s, when an unknown printer took a galley of type and scrambled it to make a type specimen book. It has survived not only five centuries, but also the leap into electronic typesetting, remaining essentially unchanged. It was popularised in the 1960s with the release of Letraset sheets containing Lorem Ipsum passages, and more recently with desktop publishing software like Aldus PageMaker including versions of Lorem Ipsum.', 'img/category_author_cover.png', '2017-04-11 14:14:14'),
+(4, 'Other', 'Lorem Ipsum is simply dummy text of the printing and typesetting industry. Lorem Ipsum has been the industry''s standard dummy text ever since the 1500s, when an unknown printer took a galley of type and scrambled it to make a type specimen book. It has survived not only five centuries, but also the leap into electronic typesetting, remaining essentially unchanged. It was popularised in the 1960s with the release of Letraset sheets containing Lorem Ipsum passages, and more recently with desktop publishing software like Aldus PageMaker including versions of Lorem Ipsum.', 'img/category_other_cover.jpg', '2017-04-11 14:16:25');
 
 -- --------------------------------------------------------
 
@@ -60,15 +61,16 @@ CREATE TABLE IF NOT EXISTS `theme` (
   `user_name` varchar(255) NOT NULL,
   `date_created` timestamp NOT NULL DEFAULT CURRENT_TIMESTAMP,
   PRIMARY KEY (`id`)
-) ENGINE=InnoDB  DEFAULT CHARSET=latin1 AUTO_INCREMENT=3 ;
+) ENGINE=InnoDB  DEFAULT CHARSET=latin1 AUTO_INCREMENT=4 ;
 
 --
 -- Dumping data for table `theme`
 --
 
 INSERT INTO `theme` (`id`, `name`, `description`, `theme_image`, `url`, `category_id`, `user_name`, `date_created`) VALUES
-(1, 'blog website', 'People took the words Web Logs and shortened it to Blogs—online diaries, journals, or editorials, if you will. My, how Blogs have taken over the Internet. A person used to be outdated if he/she did not have a website, now having a blog is de rigeur. A blog owner will log-on daily, weekly, or whenever, and write about whatever is going on in their lives or business, or they may comment on politics and news. How wonderful the Internet is! ', 'img/theme1.png', '#', 1, 'rahul shaw', '2017-04-06 18:56:11'),
-(2, 'information website', 'A major informational site is wikipedia.org, the online encyclopedia. And it is unique, because it allows members to contribute and edit articles. Now your small business may not want such a comprehensive site, but if you have information to share or sell, an informational website would fill the bill. Suppose you have a landscaping business. ', 'img/theme2.png', '#', 1, 'mayank patodia', '2017-04-06 19:17:36');
+(1, 'flatty', 'Lorem Ipsum is simply dummy text of the printing and typesetting industry. Lorem Ipsum has been the industrys standard dummy text ever since the 1500s, when an unknown printer took a galley of type and scrambled it to make a type specimen book.', 'img/theme_flatty.jpg', '../_templates/App/flatty/', 1, 'Mayank Patodia', '2017-04-11 14:43:30'),
+(2, 'xeon', 'xeon is the most amazing theme ever built on this planet. This is so awesome.', 'img/theme_xeon.jpg', '../_templates/App/xeon/', 1, 'Rahul Shaw', '2017-04-11 14:58:46'),
+(3, 'grayscale', 'grayscale is the second most awesome theme ever', 'img/grayscae.jpg', '../_templates/Other/grayscale/', 4, 'Rahul Shaw', '2017-04-11 15:05:48');
 
 /*!40101 SET CHARACTER_SET_CLIENT=@OLD_CHARACTER_SET_CLIENT */;
 /*!40101 SET CHARACTER_SET_RESULTS=@OLD_CHARACTER_SET_RESULTS */;

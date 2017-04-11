@@ -39,16 +39,18 @@ function removeArea2() {
 }
 
 $("#clickme").click(function(){
-    $("#myModal").remove();
-    $("#clickme").remove();
-    $("LINK[href*='simply/css/myEdit.css']").remove();
-    var html = document.documentElement.innerHTML;
-    alert(html);
-    console.log("a");
-    $.post( "simply/php/save_file.php", { data: html },function(data,status){
-      console.log(data);
-    });
-    console.log("b");
+    if (confirm('Are you sure you want to save the changes?')) {
+        $("#myModal").remove();
+        $("#clickme").remove();
+        $("LINK[href*='simply/css/myEdit.css']").remove();
+        var html = document.documentElement.innerHTML;
+        $.post( "simply/php/save_file.php", { data: html },function(data,status){
+              console.log(data);
+              window.location = "../../file_created.php";
+        });
+    } else {
+        // Do nothing!
+    }
 });
 
 /*--------------------EDITOR FUNCTIONS-----------------------*/

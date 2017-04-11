@@ -10,10 +10,12 @@
 
     fwrite($myfile, $str);
     fclose($myfile);
-    echo "Written Successfully!";
-    header('Location: ../../');
+    
 
+    include 'zip_convert.php';
 
-     include 'zip_convert.php';
+    //include 'zip_download.php';
+    //header('Location: ../../');
+    //echo "Written Successfully!";
 
 ?>

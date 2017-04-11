@@ -1,8 +1,12 @@
 <?php
 
-    //$dir = '../test';
-    $zip_file = 'website.zip';
+    $dir = "".dirname(dirname(dirname(__FILE__)));
 
+    $search = '\\';
+    $tmp = explode($search,$dir);
+    $dir_name = end($tmp);
+    //$dir = '../test';
+    $zip_file = '../../../'.$dir_name.'.zip';
     // Get real path for our folder
     $rootPath = realpath($dir);
 
@@ -19,8 +23,10 @@
 
     foreach ($files as $name => $file)
     {
+        $pos = strpos(dirname($file), 'simply');
         // Skip directories (they would be added automatically)
-        if (!$file->isDir())
+        if (!$file->isDir() && $pos===false)
+
         {
             // Get real and relative path for current file
             $filePath = $file->getRealPath();
@@ -31,7 +37,15 @@
         }
     }
 
+
     // Zip archive will be created only after closing object
 $zip->close();
+session_start();
+$_SESSION["file_name"] = $dir_name;
+//echo dirname(dirname(dirname(__FILE__)));
+
+//include 'zip_download.php';
+
+
 
 ?>
