@@ -280,3 +280,18 @@ body.back-4 {
 
 
 /* Wesbite Download Ends */
+
+
+
+/* Get started Begins */
+
+body.back-5 {
+    background: linear-gradient(
+            rgba(20,20,20, .5),
+            rgba(20,20,20, .5)),
+    url("../img/back5.jpg");
+    font-family: 'Roboto', sans-serif;
+    background-size: cover;
+}
+
+/* Get started ends */

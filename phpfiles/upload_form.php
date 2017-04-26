@@ -1,6 +1,9 @@
 <?php
 	require_once('db.php');
 
+	ini_set('upload_max_filesize', '10M');
+	ini_set('post_max_size', '10M');
+
 	$zip_url = '';
 	$img_url = '';
 
@@ -19,7 +22,7 @@
 	$themename = $_POST['themename'];
 	$abouttheme = $_POST['abouttheme'];
 	$category_id = $_POST['category'];
-	$cat_id = intval($category_id);
+	$cat_id = (int)$category_id;
 	// echo $_POST['username'];
 
 	if($_FILES["coverImage"]["name"]) {
@@ -105,8 +108,7 @@ if($_FILES["zip_file"]["name"]) {
 	// 
 	// echo $sql;
 	if ($conn->query($sql) === TRUE) {
-	    //echo "New record created successfully";
-	    header('Location: ../view_websites.html?id='.$cat_id);
+		header('Location: ../view_websites.html?id='.$cat_id);
 	} else {
 	    // echo "Error: " . $sql . "<br>" . $conn->error;
 	}

@@ -10,15 +10,15 @@
         <form enctype="multipart/form-data" method="post" id="upForm" action="phpfiles/upload_form.php">
           <div class="form-group">
             <label for="userName">Your Name</label>
-            <input type="text" class="form-control" id="userName" name="username" placeholder="Enter your name">
+            <input type="text" class="form-control" id="userName" name="username" placeholder="Enter your name" required/>
           </div>
           <div class="form-group">
             <label for="themeName">Theme Name</label>
-            <input type="text" class="form-control" id="userName" name="themename" placeholder="Name of the Theme">
+            <input type="text" class="form-control" id="userName" name="themename" placeholder="Name of the Theme" required/>
           </div>
           <div class="form-group">
             <label for="themeDescription">About your Theme</label>
-            <textarea type="text" class="form-control" id="themeDescription" rows="5" name="abouttheme" placeholder="About your theme"></textarea>
+            <textarea type="text" class="form-control" id="themeDescription" rows="5" name="abouttheme" placeholder="About your theme" required></textarea>
           </div>
           <div class="form-group">
             <label for="category">Select Category (select one):</label>
@@ -40,11 +40,11 @@
               </div>
             </div>
           </div>
-        </div>
-        <div class="modal-footer">
-          <input type="submit" id="submitUpload" class="btn btn-default" value="Submit" />
-          <!-- <button type="button" class="btn btn-primary">Save changes</button> -->
-        </div>
+        
+          <div class="modal-footer">
+            <input type="submit" id="submitUpload" class="btn btn-default" value="Submit" />
+            <!-- <button type="button" class="btn btn-primary">Save changes</button> -->
+          </div>
       </form>
 
     </div>
